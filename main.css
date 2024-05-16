@@ -1,0 +1,50 @@
+#div1{background-color: rgb(172, 209, 240);
+width: 100%;
+height: 25%;}
+
+
+.container{
+  border-radius: 5px;
+  background-color: rgb(139, 236, 168);
+
+
+  display: inline;
+  
+}
+input,select {
+  width: 20%;
+  padding: 12px;
+ 
+  box-sizing: border-box;
+ 
+
+ 
+}
+#btn{
+  width: 10%;
+    cursor: pointer;
+    background-color: rgb(103, 131, 202);
+    
+}
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(201, 205, 203);
+}
+
+th {
+  height: 50px;
+}
+button{
+  background-color: rgb(167, 3, 3);
+  border: orangered;
+  border-radius: 20px   ;
+  
+}
+
+form{background-color: aquamarine;}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Med amine khaldi</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+	<div  id="div1" >
+		<h1>Stagiaires My BetaApps</h1>
+
+	</div> 
+
+	<div class="container">
+		
+		<form>
+			<h2>Ajouter un Stagiaire</h2>
+		<label for="fname">Nom et Prenom</label>
+		<input type="text" name="fname" id="fname">
+		<label for="lname">Institue D'origine</label>
+		<input type="text" name="lname" id="lname">
+		<label>Service de Stage</label>
+		<select form="select" id="stage">
+		<option type="text">Devops</option>
+		<option type="text" >Developement</option> </select>
+		
+		
+		<input type="button" name="button" id="btn" value="Add" onclick="AddRow()">
+		</form>
+
+	</div>
+	<br>
+
+		<table id="show">
+			
+				<tr>
+					<th>ID</th>
+					<th>Nom et Prenom</th>
+					<th>Institue D'origine</th>
+					<th>Service de Stage</th>
+					<th style="width: 60px;"> </th>
+					
+					
+				</tr>
+			
+		</table>
+	
+	
+	<script>
+		
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+		var list4 = [];
+		var list5 = [];
+
+		var n = 1;
+		var x = 0;
+
+		function AddRow(){
+
+			var AddRown = document.getElementById('show');
+			var NewRow = AddRown.insertRow(n);
+
+			const a =Math.floor(Math.random()*(10-1))+1;
+			console.log(a);
+			list1[x]=a;
+			list2[x] = document.getElementById("fname").value;
+			list3[x] = document.getElementById("lname").value;
+			list4[x] = document.getElementById("stage").value;
+			/*list4[x] = document.getElementById("id").value;*/
+			list5[x] = document.insertCell='<button id="button" onclick="remove()">Delete</button>';
+			
+
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+			var cel4 = NewRow.insertCell(3);
+			var cel5 = NewRow.insertCell(4);
+
+			cel1.innerHTML = list1[x];
+			cel2.innerHTML = list2[x];
+			cel3.innerHTML = list3[x];
+			cel4.innerHTML = list4[x];
+			cel5.innerHTML = list5[x];
+
+
+			n++;
+			x++;
+		}
+		function remove()
+		{
+			
+			document.getElementById("show").deleteRow(i=1 , i++);
+			
+		 
+	    }
+	</script>
+</body>
+</html>
